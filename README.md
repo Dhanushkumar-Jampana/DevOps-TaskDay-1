@@ -1,44 +1,63 @@
-### This repository is no longer maintained!
+# 🚀 Task 1: Automate Code Deployment Using CI/CD Pipeline
 
-**For the most up to date test app to get you started on Heroku, head on over to [`node-js-getting-started`](https://github.com/heroku/node-js-getting-started).**
+## 📌 Objective
+
+Set up a complete CI/CD pipeline to build and deploy a Node.js web application using **GitHub Actions** and **Docker**.
 
 ---
 
-# node-js-sample
+## 🛠️ Tech Stack
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+- Node.js
+- GitHub
+- GitHub Actions
+- Docker
+- DockerHub
 
-## Running Locally
+---
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
+## 🔧 Pipeline Workflow
 
-```sh
-git clone git@github.com:heroku/node-js-sample.git # or clone your own fork
-cd node-js-sample
-npm install
-npm start
-```
+The CI/CD process is automated through a GitHub Actions workflow file:  
+📁 `.github/workflows/main.yml`
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
+### Workflow Includes:
 
-## Deploying to Heroku
+1. ✅ Trigger: On every push to `main` branch  
+2. 🧪 Step 1: Run tests (if any)  
+3. 🛠 Step 2: Build the Docker image  
+4. 📤 Step 3: Push Docker image to DockerHub  
+5. 🚀 Step 4: Deploy (you can extend this as needed)
 
-```
-heroku create
-git push heroku master
-heroku open
-```
+---
 
-Alternatively, you can deploy your own copy of the app using the web-based flow:
+## 📂 Project Structure
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+nodejs-demo-app/
+├── app.js
+├── Dockerfile
+├── package.json
+├── .github/
+│ └── workflows/
+│ └── main.yml
+└── README.md
+## 🐳 Docker Commands (Optional for Local Testing)
 
-## Documentation
+**Build image:**
+```bash
+docker build -t your-dockerhub-username/nodejs-demo-app .
+Run container:
 
-For more information about using Node.js on Heroku, see these Dev Center articles:
+docker run -p 3000:3000 your-dockerhub-username/nodejs-demo-app
+Access App:
+Visit http://localhost:3000
 
-- [10 Habits of a Happy Node Hacker](https://blog.heroku.com/archives/2014/3/11/node-habits)
-- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
+✅ CI/CD Setup in GitHub
+Create repository on GitHub
+Push your Node.js project
+Add your GitHub Actions workflow file at:
+.github/workflows/main.yml
+Store DockerHub credentials as GitHub secrets:
+
+DOCKER_USERNAME
+DOCKER_PASSWORD
