@@ -29,6 +29,9 @@ The CI/CD process is automated through a GitHub Actions workflow file:
 4. 📤 Step 3: Push Docker image to DockerHub  
 5. 🚀 Step 4: Deploy (you can extend this as needed)
 
+result
+<img width="1920" height="1080" alt="task1-github action" src="https://github.com/user-attachments/assets/52c054ba-d76c-43e9-a900-69bf2e227fe5" />
+
 ---
 
 ## 📂 Project Structure
@@ -61,4 +64,3 @@ Store DockerHub credentials as GitHub secrets:
 
 DOCKER_USERNAME
 DOCKER_PASSWORD
-<img width="1920" height="1080" alt="task1-github action" src="https://github.com/user-attachments/assets/a018884e-8fe8-42a7-9fb0-d7ce1c97381b" />
