@@ -61,3 +61,4 @@ Store DockerHub credentials as GitHub secrets:
 
 DOCKER_USERNAME
 DOCKER_PASSWORD
+<img width="1920" height="1080" alt="Screenshot (104)" src="https://github.com/user-attachments/assets/249a43f9-80bc-471b-b2d2-3dbca493f1ea" />
